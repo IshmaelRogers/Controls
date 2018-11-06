@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+# Ishmael Rogers
+# Robotics Engineer, Infinitely Deep Robotics Group
+# www.idrg.io
+# 2018 
 
-You can use the [editor on GitHub](https://github.com/IshmaelRogers/Controls/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Controls engineering 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Open-loop control
 
-### Markdown
+# Closed-loop control
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# PID
 
-```markdown
-Syntax highlighted code block
+# P- Control
 
-# Header 1
-## Header 2
-### Header 3
+# PI- Control
 
-- Bulleted
-- List
+# PD- Control
 
-1. Numbered
-2. List
+# PID - Control 
 
-**Bold** and _Italic_ and `Code` text
+# Limitations
 
-[Link](url) and ![Image](src)
-```
+# Real life case - Integrator Windup
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+# Real life case - Noise
 
-### Jekyll Themes
+# Control Design Objective and Criteria 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/IshmaelRogers/Controls/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Tuning Strategies 
 
-### Support or Contact
+# Combine Concepts
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Project: Quadrotor Control using PID 
+
+
