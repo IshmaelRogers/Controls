@@ -11,8 +11,8 @@
 [image6]: ./images/stepResponse.png
 [image7]: ./images/typesofoscillations.png
 [image8]: ./images/PV&SP.png
-[image9]: ./image/contvsdisc.png
-[image10]: ./image/rectangles.png
+[image9]: ./images/contvsdisc.png
+[image10]: ./images/rectangles.png
 
 # Controls Systems engineering 
 A multi-disciplinary topic with roots in engineering and applied mathematics
