@@ -192,8 +192,26 @@ As Ki increases:
 * Steady-state error: ecrease 
 * Stability: Degrade 
 
+Adding the integral gain allowed us to minimize the SSE but increase the settling time and percent overshoot. 
 
 # PD- Control
+
+The derivative term attempts to predict what the error will be by linearly extrapolating the change in error value. When the system takes into an account the rate of change in error, it can approach the setpoint much more elegantly and rapidly. 
+
+NOTE: All this means that it looks to future values. 
+NOTE: The finite difference approximation of the derivative is the slope of the tangent line
+
+Single-step backwards difference formula
+---
+The derivative of a function is the slope of the tangent line evaluated at a particular point. We can approximate the slow with the following formula
+
+<a href="https://www.codecogs.com/eqnedit.php?latex={f}'(x_{k})\approx&space;\frac{f(x_{k})-f(x_{k-1})}{\Delta&space;t}\Rightarrow&space;\frac{e_{k}-e_{k-1}}{\Delta&space;t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{f}'(x_{k})\approx&space;\frac{f(x_{k})-f(x_{k-1})}{\Delta&space;t}\Rightarrow&space;\frac{e_{k}-e_{k-1}}{\Delta&space;t}" title="{f}'(x_{k})\approx \frac{f(x_{k})-f(x_{k-1})}{\Delta t}\Rightarrow \frac{e_{k}-e_{k-1}}{\Delta t}" /></a>
+
+Effects on kd
+---
+As kd increases:
+Overshoot: Decreases
+
 
 # PID - Control 
 
