@@ -5,7 +5,7 @@
 
 [image1]: ./images/blockdiagram.jpg
 [image2]: ./images/closed_loop.PNG
-[image3]: ./images/idealcontroller.png
+[image3]: ./images/idealcontroller.PNG
 # Controls engineering 
 A multi-disciplinary topic with roots in engineering and applied mathematics
 
