@@ -1,9 +1,9 @@
-P CONTROLLER 
+#P CONTROLLER 
 
-Regulates the altitude of the quadrotor
+#Regulates the altitude of the quadrotor
 
- As K_p increases, overshoot increase, frequency of oscillations
- As K_p increases, proportional droop decreases
+# As K_p increases, overshoot increase, frequency of oscillations
+#As K_p increases, proportional droop decreases
 
 
 ############################################################################
@@ -66,18 +66,18 @@ class P_Controller:
 
 ############################################################
 ############################################################
-PI Controller
+#PI Controller
 
-Used to eliminate or reduce steady state error
+#Used to eliminate or reduce steady state error
 
-Increase the control input in relation to the total 
-accumulated error.
+#Increase the control input in relation to the total 
+#accumulated error.
 
-As Ki increases : Rise time: decrease, Overshoot: increase,
+#As Ki increases : Rise time: decrease, Overshoot: increase,
 
-settling Time: increase, steady-state error: decrease, 
+#settling Time: increase, steady-state error: decrease, 
 
-stability: Degrade 
+#stability: Degrade 
 
 
 
@@ -143,7 +143,7 @@ class PI_controller:
 ###################################################################################
 ###################################################################################
 
-PD Controller 
+#PD Controller 
 
 
 
@@ -304,4 +304,4 @@ class PD_Controller:
 ##########################################################################################
 ###########################################################################################
 
-PID Controller
+#PID Controller
