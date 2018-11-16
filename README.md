@@ -9,7 +9,10 @@
 [image4]: ./images/quad.jpg
 [image5]: ./images/kp_characteristics.png
 [image6]: ./images/stepResponse.png
-[image7]: ./images/typesofoscillations
+[image7]: ./images/typesofoscillations.png
+[image8]: ./images/PV&SP.png
+[image9]: ./image/contvsdisc.png
+[image10]: ./image/rectangles.png
 
 # Controls Systems engineering 
 A multi-disciplinary topic with roots in engineering and applied mathematics
@@ -146,6 +149,49 @@ A damper is any mechanism that dissipates energy usually assoicated with frictio
 ![alt text][image7]:
 
 # PI- Control
+
+When there are strict design requirments on the amount of steady-state error (SSE) that is tolerable, the P controller in not enough. In general the PI controller is necessary to eliminate or reduce the SSE. Addin the integral gain can smooth certain types of noise. Similiar to the proportional gain, it is not possible to make the integral gain randomly large with consequences. 
+
+Note: If <a href="https://www.codecogs.com/eqnedit.php?latex=k_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k_{i}" title="k_{i}" /></a> is too large, the overcompensation of the error can cause the oscillations to increase in magnitude i.e increased instability. 
+
+We increase the control input in relation to the total accumulated error. Simply put, the integral controller takes into consideration all the past system error values. Thus, even small errors will eventually be amplified and cause the controller to increase its input to the plant. 
+
+![alt text][image8]:
+
+ PV = Process Variable (measured output)
+ SP = Set Point (reference signal) 
+ 
+Implementing the continuous time controller equation on a computer
+-- 
+The graphs below compares how a computer interperts a mobile robot's varying speed as it accelerates to its desired destination. The image at the top is an example of how humans perceive the graph (continuously). The image at the bottom is an example of how computer perceive the graphs, (discretely). 
+NOTE: The computer only "see" the samples at periodic intervals usually defined by a sampling rate. Therefore, discrete-time approximations are needed for both integral and derivatives.
+
+![alt text][image9]: 
+
+The Integral
+---
+In calculus the integral represents the area under a curve. In discrete-time sceniaros, this can be approximated as simply summing rectangles. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\int_{0}^{t}e(\tau)d\tau&space;\approx&space;\sum_{k=1}^{n}e_{k}\Delta&space;t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\int_{0}^{t}e(\tau)d\tau&space;\approx&space;\sum_{k=1}^{n}e_{k}\Delta&space;t" title="\int_{0}^{t}e(\tau)d\tau \approx \sum_{k=1}^{n}e_{k}\Delta t" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=e_{k}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e_{k}" title="e_{k}" /></a> - the error at each point (i.e the height of the rectangle)
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;t" title="\Delta t" /></a> - the time interval (i.e the width of the rectangle) 
+
+![alt text][image10]
+
+NOTE: At each new time-step, the computer program should compute the new error and add it to the accumulated sum.
+<a href="https://www.codecogs.com/eqnedit.php?latex=E_{k}=&space;E_{k-1}&space;&plus;&space;e_k" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{k}=&space;E_{k-1}&space;&plus;&space;e_k" title="E_{k}= E_{k-1} + e_k" /></a>
+
+Effects of ki
+---
+As Ki increases: 
+* Rise time: Decrease
+* Overshoot: Increase
+* Settling Time: Increase
+* Steady-state error: ecrease 
+* Stability: Degrade 
+
 
 # PD- Control
 
