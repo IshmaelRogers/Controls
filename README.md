@@ -17,6 +17,8 @@ In robotics, movement commands, yaw, pitch roll, speed control
 
 Open loop control systems do not have sensors that measure the output of the system. Furthermore, the lack the capability to correct error in the system. The performance of a household toaster does not directly measure the how "well" the toast is cooked. The hungry operator of the toaster simply inputs desired heat and time settings and the toaster carries out those commands regardless of the state of the toast inside. In a simple system this behavior is tolerable but, for a more complex system with mission critical tasks, we must develop a way for the system to monitor its on performance and correct errors due to distrubances 
 
+Please see the open_control.py and hover_plot.py files in this repo to get an idea of the performance of an open loop controller designed for a drone
+
 
 # Closed-loop control
 
