@@ -34,20 +34,33 @@ Closed loop control features a sensor that constantly monitors the output of the
 * <a href="https://www.codecogs.com/eqnedit.php?latex=e(t)&space;=&space;r(t)&space;-y(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e(t)&space;=&space;r(t)&space;-y(t)" title="e(t) = r(t) -y(t)" /></a> -The error signal is feed into the systems controller. 
 NOTE: The controller takes this error signal and adjusts the system's parameters that will drive the error to zero. 
 
-* <a href="https://www.codecogs.com/eqnedit.php?latex=u(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u(t)" title="u(t)" /></a> - This signal represents the output of the controller and the input to the plant
+* <a href="https://www.codecogs.com/eqnedit.php?latex=u(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u(t)" title="u(t)" /></a> - The control signal represents the output of the controller and the input to the plant
 
-Below is the block diagram of a crusie control system
+Below is the block diagram of a simple cruise control system
 --
 ![alt text][image2]
 
 # PID
+t
+If we isolate the controller portion of the block diagram and "look inside" we can understand how the control signal,  <a href="https://www.codecogs.com/eqnedit.php?latex=u(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u(t)" title="u(t)" /></a> is produced. 
 
-How is the control signal produced. Look inside the controller box. 
-Proportional, integral, derivative components take the error and manipulate it using calculus
+Three components
+---
+Proportional, integral, derivative components take the error, <a href="https://www.codecogs.com/eqnedit.php?latex=e(t)&space;=&space;r(t)&space;-y(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e(t)&space;=&space;r(t)&space;-y(t)" title="e(t) = r(t) -y(t)" /></a> manipluates it. 
 
-There are three parameters
+NOTE: The algrebraic sum of these components represent the control signal.
 
-kp, ki and kd 
+There are three parameters associated with each component that needs to be tuned by the designer in order to acheieve optimal performance and stability. 
+
+Controller gains
+---
+<a href="https://www.codecogs.com/eqnedit.php?latex=k_{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k_{p}" title="k_{p}" /></a> 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=k_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k_{i}" title="k_{i}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=k_{d}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k_{d}" title="k_{d}" /></a>
+
+ 
 
 NOTE: must be sa
 
@@ -58,6 +71,7 @@ simple and inexpensive to produce
 Do not require a mathematical model
 
 Ideal controller 
+
 ![alt text][image3]
 
 Parameterstake the error and manipulate it in some way.
