@@ -41,7 +41,11 @@ Below is the block diagram of a simple cruise control system
 ![alt text][image2]
 
 # PID
-t
+The PID controller is known for being the most reliable scheme in industry. It is very relatively inexpensive and easy to use. In some applications they are ideal because they do not require a mathematical model for the plant.  
+NOTE: The hardware used for PID control is also known as an operational amplifier 
+
+The primary purpose of the PID is to keep track of its input's (<a href="https://www.codecogs.com/eqnedit.php?latex=e(t)&space;=&space;r(t)&space;-y(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e(t)&space;=&space;r(t)&space;-y(t)" title="e(t) = r(t) -y(t)" /></a>) past and present values. Equipped with this knowledge, it is able to predict future values. 
+
 If we isolate the controller portion of the block diagram and "look inside" we can understand how the control signal,  <a href="https://www.codecogs.com/eqnedit.php?latex=u(t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u(t)" title="u(t)" /></a> is produced. 
 
 Three components
@@ -52,29 +56,20 @@ NOTE: The algrebraic sum of these components represent the control signal.
 
 There are three parameters associated with each component that needs to be tuned by the designer in order to acheieve optimal performance and stability. 
 
+![alt text][image3]
+
 Controller gains
 ---
+These are simply constants that scales to each component.
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=k_{p}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k_{p}" title="k_{p}" /></a> 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=k_{i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k_{i}" title="k_{i}" /></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=k_{d}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k_{d}" title="k_{d}" /></a>
 
- 
-
-NOTE: must be sa
-
-So common because of the reliablity in various field
-
-simple and inexpensive to produce
-
-Do not require a mathematical model
-
-Ideal controller 
-
-![alt text][image3]
-
-Parameterstake the error and manipulate it in some way.
+Setting individual gains to zero allow for the possiblitly to create combinations of controllers that can meet specific needs for a system.
+For completeness, I present the explict equation for the control signal: <a href="https://www.codecogs.com/eqnedit.php?latex=u(t)=&space;k_{p}e(t)&plus;k_{i}\int_{0}^{T}e(\tau)d\tau&space;&plus;k_{d}\frac{\mathrm{d}&space;e(t)}{\mathrm{d}&space;x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u(t)=&space;k_{p}e(t)&plus;k_{i}\int_{0}^{T}e(\tau)d\tau&space;&plus;k_{d}\frac{\mathrm{d}&space;e(t)}{\mathrm{d}&space;x}" title="u(t)= k_{p}e(t)+k_{i}\int_{0}^{T}e(\tau)d\tau +k_{d}\frac{\mathrm{d} e(t)}{\mathrm{d} x}" /></a>
 
 # P- Control
 
