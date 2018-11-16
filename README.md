@@ -3,8 +3,8 @@
 # www.idrg.io
 # 2018 
 
-[image1] ./images/blockdiagram.jpg
-[image2] ./images/closed_loop.PNG
+[image1] ./images/blockdiagram.PNG
+[image2] ./images/closed_loop.jpg
 
 # Controls engineering 
 A multi-disciplinary topic with roots in engineering and applied mathematics
