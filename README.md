@@ -116,7 +116,7 @@ Effects on kp
 0. As K_p increases: 
 * overshoot increase
 * frequency of oscillations
-1. As K_p increases:
+1. As K_p decreases:
 * proportional droop decreases
 
 ![alt text][image5]:
