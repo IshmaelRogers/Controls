@@ -6,7 +6,9 @@
 [image1]: ./images/blockdiagram.jpg
 [image2]: ./images/closed_loop.PNG
 [image3]: ./images/idealcontroller.PNG
-# Controls engineering 
+[image4]: ./images/quad.jpg
+
+# Controls Systems engineering 
 A multi-disciplinary topic with roots in engineering and applied mathematics
 
 design systems that have a predicatable and desire response to an input. 
@@ -17,7 +19,7 @@ In robotics, movement commands, yaw, pitch roll, speed control
 
 Open loop control systems do not have sensors that measure the output of the system. Furthermore, the lack the capability to correct error in the system. The performance of a household toaster does not directly measure the how "well" the toast is cooked. The hungry operator of the toaster simply inputs desired heat and time settings and the toaster carries out those commands regardless of the state of the toast inside. In a simple system this behavior is tolerable but, for a more complex system with mission critical tasks, we must develop a way for the system to monitor its on performance and correct errors due to distrubances 
 
-Please see the open_control.py and hover_plot.py files in this repo to get an idea of the performance of an open loop controller designed for a drone
+Please see the Open Control folder in this repo for code that can be used to get an idea of the performance of an open loop controller designed for a drone
 
 
 # Closed-loop control
@@ -74,6 +76,10 @@ Setting individual gains to zero allow for the possiblitly to create combination
 For completeness, I present the explict equation for the control signal: 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=u(t)=&space;k_{p}e(t)&plus;k_{i}\int_{0}^{T}e(\tau)d\tau&space;&plus;k_{d}\frac{\mathrm{d}&space;e(t)}{\mathrm{d}&space;x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u(t)=&space;k_{p}e(t)&plus;k_{i}\int_{0}^{T}e(\tau)d\tau&space;&plus;k_{d}\frac{\mathrm{d}&space;e(t)}{\mathrm{d}&space;x}" title="u(t)= k_{p}e(t)+k_{i}\int_{0}^{T}e(\tau)d\tau +k_{d}\frac{\mathrm{d} e(t)}{\mathrm{d} x}" /></a>
+
+To get an understanding of the types of controller combinations  available we will discuss some common ones below as they might be applied to quadcopter. 
+![alt text][image4]
+
 
 # P- Control
 
