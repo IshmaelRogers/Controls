@@ -13,6 +13,7 @@
 [image8]: ./images/PV&SP.png
 [image9]: ./images/contvsdisc.png
 [image10]: ./images/rectangles.png
+[image11]: .images/deadtime.png
 
 # Controls Systems engineering 
 A multi-disciplinary topic with roots in engineering and applied mathematics
@@ -217,6 +218,21 @@ Overshoot: Decreases
 
 # Limitations
 
+There are some applications in which PID is not the best choice of controller. 
+
+Limits
+--
+0. Reactive to disturbances - The controller must first detect an error before it can correct it.
+
+1. Dead time - The delay from when a controller output signal is issued until the system begins to respond.
+
+lag
+
+Higer order dynamincs
+
+no models = no stability
+
+not optimal
 # Real life case - Integrator Windup
 
 # Real life case - Noise
