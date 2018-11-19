@@ -225,17 +225,50 @@ Limits
 0. Reactive to disturbances - The controller must first detect an error before it can correct it.
 
 1. Dead time - The delay from when a controller output signal is issued until the system begins to respond.
+![alt text][image11]
 
-lag
+2. Lag
+3. Higer order dynamincs
+4. No mathematical model - Therefore there is no gaurantee for stability
+5. Not optimal - if perfformance is necessary, another controller type is necessary
 
-Higer order dynamincs
-
-no models = no stability
-
-not optimal
 # Real life case - Integrator Windup
 
+The ideal version of the PID is not used much in idustry. 
+
+Time Constant Version
+---
+
+The integral term can help eliminate steady-state error pretty well by mnake the control effor proportional to the accumulated error. This approach does not work particularly well when the system's setpoint changes by a significant amount and the system dynamcis are slow. 
+
+Integral Windup Examples
+---
+
+If the temperature in a roon is 50 degree Farenheit and the set point was moved to 75 degree the heating system could take hours to drive the temperature to the desired set point. Until he tracking error is zero, the integral term would continue to grow. Slow dynamics and coupled with the accumulated error would caude the furnance to increase the temperature even though the setpoint has already been reached, thus causing a large overshoot. The system would then spend time trying to unwind the accumulated error before it reaches the desired set point. 
+
+Actuator Saturation
+---
+
+If the setpoint were changed far enough it may not be possible to ever reach the desired goal even if the actuators were operating at 100% output (saturated). At this point the only thing the operator could do is move the setpoint to an achieveable level. 
+
+To correct integrator windup is to stop integrating the error id the controller output is fully saturated. 
+
+
 # Real life case - Noise
+
+What problems with PD controller introduce. 
+
+
+High frequency noise - believes it sees a large change in error, response with large control effort.
+ Low pass filter for high frequency noise degrades the performance of the PD controller because it relies on responding to the rate of change in the error.
+ 
+ A low pass filter [insert equation] has the following equation 
+ 
+ alpha is a smoothing factor the smaller alpha is the more high frequency noise is suppressed
+ 
+ The 1st order recursive filter adds lag i.e delays the controller input to the system.
+ 
+ Please see the filter.py code in this repo to implement a low pass filter
 
 # Control Design Objective and Criteria 
 
