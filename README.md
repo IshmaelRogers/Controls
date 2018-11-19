@@ -272,7 +272,30 @@ High frequency noise - believes it sees a large change in error, response with l
 
 # Control Design Objective and Criteria 
 
+Control design objectives:
+---
+
+0. Stability
+1. Tracking
+2. Robustness
+3. Disturbance rejection
+4. Optimality
+
+Design process
+---
+
+0. Define performance specs (max tracking error, percent overshoot, settling time, etc.)
+1. Develop a mathematical model
+2. Choose sensors and controller type
+3. Design the controller to meet the specs 
+4. Simulate the controller to test results 
+5. Choose hardware/software
+
 # Tuning Strategies 
+
+0. ZN 1 
+1. ZN 2
+2. Graident descent 
 
 # Combine Concepts
 
